@@ -58,3 +58,17 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Hero background spotlight interactive layers (touch & reduced-motion safeguards) */
+@media (hover: none), (pointer: coarse) {
+  .hero-interactive-layer {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-interactive-layer {
+    display: none !important;
+  }
+}
+

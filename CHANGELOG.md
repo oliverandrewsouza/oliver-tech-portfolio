@@ -8,6 +8,9 @@ O formato é baseado no padrão [Keep a Changelog](https://keepachangelog.com/pt
 
 ## [Unreleased]
 
+### Added
+* fundo técnico e spotlight interativo no HeroSection, com alternativa estática para dispositivos de toque e movimento reduzido.
+
 ### Fixed
 * **Deslocamento indevido de rolagem na troca de idiomas**: Eliminação de scroll jump global que deslocava a visualização da página para a região do terminal e da seção de contato em desktop e mobile ao alternar entre PT e EN, desacoplando a sincronização do console interativo do ciclo de rolagem global do navegador.
 * **Conteúdo parcialmente traduzido na versão inglesa**: Correção de títulos de seções (`ABOUT_ME`), séries editoriais do OliverTech (`TECH MEMORY`, `PROJECTS`, `TECH AROUND THE WORLD`, `CAREER.LOG`), badges, períodos de atuação e rótulos da composição visual do DocPed.
