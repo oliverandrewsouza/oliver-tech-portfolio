@@ -1,4 +1,3 @@
-import { useRef, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { TerminalBadge } from '../ui/TerminalBadge';
 import { BlinkingCursor } from '../ui/BlinkingCursor';
@@ -10,140 +9,15 @@ import {
 
 export const HeroSection = () => {
   const { t } = useLanguage();
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const heroEl = heroRef.current;
-    if (!heroEl) return;
-
-    // Detect touch-only devices or preference for reduced motion
-    const hasCoarsePointer = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (hasCoarsePointer || prefersReducedMotion) {
-      return;
-    }
-
-    let rafId: number | null = null;
-    let targetX = -999;
-    let targetY = -999;
-
-    const updateSpotlightPosition = () => {
-      if (heroEl) {
-        heroEl.style.setProperty('--pointer-x', `${targetX}px`);
-        heroEl.style.setProperty('--pointer-y', `${targetY}px`);
-      }
-      rafId = null;
-    };
-
-    const handlePointerEnter = (e: PointerEvent) => {
-      if (e.pointerType === 'touch') return;
-      const rect = heroEl.getBoundingClientRect();
-      targetX = e.clientX - rect.left;
-      targetY = e.clientY - rect.top;
-      heroEl.style.setProperty('--spotlight-opacity', '1');
-      if (rafId === null) {
-        rafId = requestAnimationFrame(updateSpotlightPosition);
-      }
-    };
-
-    const handlePointerMove = (e: PointerEvent) => {
-      if (e.pointerType === 'touch') return;
-      const rect = heroEl.getBoundingClientRect();
-      targetX = e.clientX - rect.left;
-      targetY = e.clientY - rect.top;
-      if (rafId === null) {
-        rafId = requestAnimationFrame(updateSpotlightPosition);
-      }
-    };
-
-    const handlePointerLeave = () => {
-      heroEl.style.setProperty('--spotlight-opacity', '0');
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-    };
-
-    heroEl.addEventListener('pointerenter', handlePointerEnter);
-    heroEl.addEventListener('pointermove', handlePointerMove);
-    heroEl.addEventListener('pointerleave', handlePointerLeave);
-
-    return () => {
-      heroEl.removeEventListener('pointerenter', handlePointerEnter);
-      heroEl.removeEventListener('pointermove', handlePointerMove);
-      heroEl.removeEventListener('pointerleave', handlePointerLeave);
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-      }
-    };
-  }, []);
 
   return (
     <section 
       id="inicio" 
-      ref={heroRef}
       className="relative min-h-[92vh] flex flex-col justify-center pt-28 pb-16 md:pt-36 md:pb-24 border-b border-white/10 overflow-hidden"
     >
-      {/* Layer 1: Discrete technical grid with gradual edge & text mask */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-0 select-none opacity-40 sm:opacity-50"
-        aria-hidden="true"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(56, 189, 248, 0.045) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(56, 189, 248, 0.045) 1px, transparent 1px)
-          `,
-          backgroundSize: '48px 48px',
-          maskImage: 'radial-gradient(ellipse 85% 75% at 75% 45%, black 20%, rgba(0, 0, 0, 0.4) 60%, transparent 92%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 75% 45%, black 20%, rgba(0, 0, 0, 0.4) 60%, transparent 92%)',
-        }}
-      />
-
-      {/* Layer 2A: Ambient base digital dot matrix (concentrated on right, faded near text) */}
+      {/* Subtle ambient depth backlight aura specific to the portrait frame */}
       <div
-        className="absolute inset-0 pointer-events-none z-0 select-none opacity-25 sm:opacity-35"
-        aria-hidden="true"
-        style={{
-          backgroundImage: 'radial-gradient(circle, rgba(56, 189, 248, 0.22) 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
-          maskImage: 'radial-gradient(ellipse 80% 70% at 78% 45%, black 15%, rgba(0, 0, 0, 0.3) 50%, transparent 88%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 78% 45%, black 15%, rgba(0, 0, 0, 0.3) 50%, transparent 88%)',
-        }}
-      />
-
-      {/* Layer 2B: Dynamic illuminated dots revealed by the flashlight spotlight beam */}
-      <div
-        className="hero-interactive-layer absolute inset-0 pointer-events-none z-0 select-none transition-opacity duration-500"
-        aria-hidden="true"
-        style={{
-          opacity: 'var(--spotlight-opacity, 0)',
-          backgroundImage: 'radial-gradient(circle, rgba(56, 189, 248, 0.95) 1.25px, transparent 1.25px)',
-          backgroundSize: '24px 24px',
-          maskImage: 'radial-gradient(circle 280px at var(--pointer-x, -999px) var(--pointer-y, -999px), black 0%, rgba(0, 0, 0, 0.4) 55%, transparent 100%)',
-          WebkitMaskImage: 'radial-gradient(circle 280px at var(--pointer-x, -999px) var(--pointer-y, -999px), black 0%, rgba(0, 0, 0, 0.4) 55%, transparent 100%)',
-        }}
-      />
-
-      {/* Layer 3: Interactive diffuse radial spotlight tracking cursor */}
-      <div
-        className="hero-interactive-layer absolute inset-0 pointer-events-none z-0 select-none transition-opacity duration-500"
-        aria-hidden="true"
-        style={{
-          opacity: 'var(--spotlight-opacity, 0)',
-          background: `radial-gradient(
-            circle 280px at var(--pointer-x, -999px) var(--pointer-y, -999px),
-            rgba(56, 189, 248, 0.10) 0%,
-            rgba(37, 99, 235, 0.04) 45%,
-            rgba(255, 77, 77, 0.012) 75%,
-            transparent 100%
-          )`,
-        }}
-      />
-
-      {/* Static subtle ambient backlight aura behind portrait frame */}
-      <div
-        className="absolute top-1/4 right-[5%] w-[420px] h-[420px] max-w-[90vw] max-h-[90vw] pointer-events-none z-0 select-none opacity-60"
+        className="absolute top-1/4 right-[5%] w-[420px] h-[420px] max-w-[90vw] max-h-[90vw] pointer-events-none z-0 select-none opacity-50"
         aria-hidden="true"
         style={{
           background: 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(37, 99, 235, 0.03) 45%, transparent 70%)',

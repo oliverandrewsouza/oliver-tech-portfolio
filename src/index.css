@@ -59,15 +59,17 @@
   }
 }
 
-/* Hero background spotlight interactive layers (touch & reduced-motion safeguards) */
+/* Hero and global background spotlight interactive layers (touch & reduced-motion safeguards) */
 @media (hover: none), (pointer: coarse) {
-  .hero-interactive-layer {
+  .hero-interactive-layer,
+  .global-interactive-layer {
     display: none !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-interactive-layer {
+  .hero-interactive-layer,
+  .global-interactive-layer {
     display: none !important;
   }
 }
