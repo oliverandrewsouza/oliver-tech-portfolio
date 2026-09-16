@@ -21,14 +21,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       if (saved === 'pt' || saved === 'en') {
         return saved;
       }
-      // Check browser navigator language
-      if (typeof navigator !== 'undefined' && navigator.language) {
-        return navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en';
-      }
     } catch {
       // LocalStorage fallback
     }
-    return 'pt';
+    return 'en';
   });
 
   const setLanguage = (lang: Language) => {

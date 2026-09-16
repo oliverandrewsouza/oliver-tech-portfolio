@@ -19,5 +19,6 @@ O formato é baseado no padrão [Keep a Changelog](https://keepachangelog.com/pt
 * **Metadados inconsistentes do DocPed**: Eliminação definitiva de descrições inadequadas que apresentavam o projeto como voltado à saúde pediátrica, estabelecendo-o com precisão como Micro-SaaS para documentação pedagógica e clínica na Educação Inclusiva e no Neurodesenvolvimento.
 
 ### Changed
+* English is now the default language for first-time visitors while preserving manually selected language preferences.
 * **Centralização dos textos traduzíveis**: Consolidação completa de todas as cadeias de texto com variação de idioma no repositório central `src/data/content.ts`, com expansão pontual e segura do modelo de tipos em `src/types/index.ts`.
 * **Alinhamento dos dados do DocPed entre experiência e projeto em destaque**: Harmonização da stack tecnológica do DocPed no card da linha do tempo com o projeto real e confirmado (`React 18`, `TypeScript`, `Vite`, `Tailwind CSS`, `Supabase`, `PostgreSQL`, `Google Gemini API`, `Vitest`), expurgando referências legadas a Next.js 15, Prisma ORM, Stripe API e Zod.
