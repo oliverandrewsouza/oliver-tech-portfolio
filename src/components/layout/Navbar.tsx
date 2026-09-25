@@ -34,6 +34,17 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const hasValidEmail = Boolean(
+    t.contact.emailValue &&
+    t.contact.emailValue.trim() !== '' &&
+    !t.contact.emailValue.includes('[') &&
+    t.contact.emailValue.toLowerCase() !== 'oliverandrewsouza@gmail.com'
+  );
+
+  const ctaHref = hasValidEmail ? '#contato' : t.contact.socials.linkedinUrl;
+  const ctaTarget = hasValidEmail ? undefined : '_blank';
+  const ctaRel = hasValidEmail ? undefined : 'noopener noreferrer';
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -91,7 +102,9 @@ export const Navbar = () => {
             <LanguageSwitch />
 
             <a
-              href="#contato"
+              href={ctaHref}
+              target={ctaTarget}
+              rel={ctaRel}
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-semibold tracking-wider text-white bg-accent/90 hover:bg-accent rounded border border-accent/60 shadow-accent-subtle transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
             >
               <MessageSquareCode className="w-3.5 h-3.5" />
@@ -139,7 +152,9 @@ export const Navbar = () => {
 
             <div className="pt-3">
               <a
-                href="#contato"
+                href={ctaHref}
+                target={ctaTarget}
+                rel={ctaRel}
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-mono font-semibold tracking-wider text-white bg-accent hover:bg-accent/90 rounded border border-accent/60 shadow-accent-subtle"
               >

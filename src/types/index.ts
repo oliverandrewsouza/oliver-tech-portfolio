@@ -113,7 +113,7 @@ export interface PortfolioContent {
   featuredProject: {
     sectionTag: string;
     sectionTitle: string;
-    exclusiveNotice: string;
+    exclusiveNotice?: string;
     project: ProjectDetail;
     uiLabels?: {
       compositionTitle: string;
@@ -162,7 +162,7 @@ export interface PortfolioContent {
     subtitle: string;
     text: string;
     emailLabel: string;
-    emailValue: string;
+    emailValue?: string;
     emailNotice: string;
     emailReservedBadge?: string;
     channelsTitle: string;

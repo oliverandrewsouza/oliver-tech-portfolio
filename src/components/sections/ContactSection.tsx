@@ -10,6 +10,13 @@ import {
 export const ContactSection = () => {
   const { t } = useLanguage();
 
+  const hasValidEmail = Boolean(
+    t.contact.emailValue &&
+    t.contact.emailValue.trim() !== '' &&
+    !t.contact.emailValue.includes('[') &&
+    t.contact.emailValue.toLowerCase() !== 'oliverandrewsouza@gmail.com'
+  );
+
   return (
     <section id="contato" className="py-20 md:py-28 relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,34 +39,36 @@ export const ContactSection = () => {
         </div>
 
         {/* Clean Direct Channels Layout (No fake backend form) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className={hasValidEmail ? "grid grid-cols-1 md:grid-cols-12 gap-8 items-start" : "max-w-2xl"}>
           
           {/* Dedicated Space for Professional E-mail */}
-          <div className="md:col-span-6 p-6 sm:p-8 rounded-xl bg-surface border-2 border-white/15 space-y-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-accent font-bold font-mono text-sm">
-                <Mail className="w-5 h-5" />
-                <span>{t.contact.emailLabel}</span>
+          {hasValidEmail && (
+            <div className="md:col-span-6 p-6 sm:p-8 rounded-xl bg-surface border-2 border-white/15 space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2.5 text-accent font-bold font-mono text-sm">
+                  <Mail className="w-5 h-5" />
+                  <span>{t.contact.emailLabel}</span>
+                </div>
+                <span className="text-[11px] font-mono text-white/50 bg-white/5 px-2.5 py-1 rounded border border-white/10">
+                  {t.contact.emailReservedBadge || 'ESPAÇO RESERVADO'}
+                </span>
               </div>
-              <span className="text-[11px] font-mono text-white/50 bg-white/5 px-2.5 py-1 rounded border border-white/10">
-                {t.contact.emailReservedBadge || 'ESPAÇO RESERVADO'}
-              </span>
-            </div>
 
-            <div className="p-4 rounded-lg bg-surface-card border-2 border-dashed border-white/20 font-mono text-sm text-white/80">
-              <span className="select-all font-semibold text-white">{t.contact.emailValue}</span>
-            </div>
+              <div className="p-4 rounded-lg bg-surface-card border-2 border-dashed border-white/20 font-mono text-sm text-white/80">
+                <span className="select-all font-semibold text-white">{t.contact.emailValue}</span>
+              </div>
 
-            <div className="flex items-start gap-2 text-xs font-mono text-primary-muted pt-1">
-              <AlertCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-              <p className="leading-relaxed">
-                {t.contact.emailNotice}
-              </p>
+              <div className="flex items-start gap-2 text-xs font-mono text-primary-muted pt-1">
+                <AlertCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <p className="leading-relaxed">
+                  {t.contact.emailNotice}
+                </p>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Direct Verified Links (LinkedIn, GitHub, Instagram) */}
-          <div className="md:col-span-6 p-6 sm:p-8 rounded-xl bg-surface border border-white/10 space-y-4">
+          <div className={`${hasValidEmail ? 'md:col-span-6' : 'w-full'} p-6 sm:p-8 rounded-xl bg-surface border border-white/10 space-y-4`}>
             <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider pb-2 border-b border-white/10">
               <Radio className="w-4 h-4 text-accent animate-pulse" />
               <span>{t.contact.channelsTitle}</span>

@@ -15,7 +15,7 @@ import {
 
 export const FeaturedProject = () => {
   const { t } = useLanguage();
-  const { project, sectionTag, exclusiveNotice } = t.featuredProject;
+  const { project, sectionTag } = t.featuredProject;
   
   // Controls which screenshot is elevated on front: 'home' or 'login'
   const [elevatedScreen, setElevatedScreen] = useState<'home' | 'login'>('home');
@@ -40,9 +40,6 @@ export const FeaturedProject = () => {
             <TerminalBadge variant="docped">
               {sectionTag}
             </TerminalBadge>
-            <span className="text-[11px] font-mono text-docped-light/90 bg-docped/10 px-2.5 py-0.5 rounded border border-docped/25">
-              {exclusiveNotice}
-            </span>
           </div>
 
           <div className="flex flex-wrap items-baseline gap-3 mb-2">

@@ -95,13 +95,13 @@ export const InteractiveConsole = () => {
         newHistory.push({
           type: 'output',
           text: language === 'pt'
-            ? `ITAÚ UNIBANCO // Analista Jr. de Engenharia de TI (Out 2021 – Fev 2024)
+            ? `ITAÚ UNIBANCO // Analista de TI (outubro de 2020 – fevereiro de 2024)
 - Sustentação de aplicações e apoio à operação em ambiente com microsserviços Java
 - Validação de endpoints e contratos de APIs REST via Postman
 - Análise investigativa de logs no Splunk para apoio a incidentes
 - Colaboração com squads de desenvolvimento, produto e qualidade
 - Ferramentas: AWS, Git, Jira, Confluence, SQL, JSON`
-            : `ITAÚ UNIBANCO // Jr. IT Engineering Analyst (Oct 2021 – Feb 2024)
+            : `ITAÚ UNIBANCO // IT Analyst (October 2020 – February 2024)
 - Application support in a distributed Java microservices environment
 - REST API endpoint and contract validation using Postman
 - Investigative log analysis in Splunk for incident triage
@@ -154,12 +154,12 @@ export const InteractiveConsole = () => {
 1. Sustentação e observabilidade: Splunk, Análise de logs, Incidentes, Jira, Confluence
 2. APIs e dados: Postman, APIs REST, JSON, SQL, PostgreSQL
 3. Desenvolvimento: React, TypeScript, Vite, Tailwind CSS, Git, Supabase
-4. Estudando atualmente: QA, Automação de testes, Python, Inglês profissional`
+4. Estudando atualmente: QA, Automação de testes, Python, Inglês — em desenvolvimento`
             : `TECHNICAL SKILLS (NO ARBITRARY PERCENTAGES):
 1. Support & Observability: Splunk, Log Analysis, Incidents, Jira, Confluence
 2. APIs & Data: Postman, REST APIs, JSON, SQL, PostgreSQL
 3. Development: React, TypeScript, Vite, Tailwind CSS, Git, Supabase
-4. Currently Studying: QA, Test Automation, Python, Professional English`,
+4. Currently Studying: QA, Test Automation, Python, English — currently improving`,
         });
         break;
 
@@ -199,13 +199,11 @@ export const InteractiveConsole = () => {
             ? `CANAIS OFICIAIS DE CONTATO:
 - LinkedIn: https://www.linkedin.com/in/oliver-souza-55822920a/
 - GitHub: https://github.com/oliverandrewsouza
-- Instagram: https://www.instagram.com/oliver.tech_/
-- E-mail: [A definir / Inserir posteriormente]`
+- Instagram: https://www.instagram.com/oliver.tech_/`
             : `OFFICIAL CONTACT CHANNELS:
 - LinkedIn: https://www.linkedin.com/in/oliver-souza-55822920a/
 - GitHub: https://github.com/oliverandrewsouza
-- Instagram: https://www.instagram.com/oliver.tech_/
-- E-mail: [To be inserted later]`,
+- Instagram: https://www.instagram.com/oliver.tech_/`,
         });
         break;
 

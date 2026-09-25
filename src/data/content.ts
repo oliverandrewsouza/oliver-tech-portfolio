@@ -28,7 +28,7 @@ export const content: Record<Language, PortfolioContent> = {
     hero: {
       label: "PORTFÓLIO // TECNOLOGIA + PRODUTOS DIGITAIS",
       title: "Tecnologia, sistemas e ideias construídas com propósito.",
-      description: "Sou Oliver Souza, engenheiro de computação com experiência em sustentação de sistemas, observabilidade, APIs e operações no setor financeiro. Desenvolvo produtos digitais e atualmente aprofundo meus conhecimentos em qualidade de software, automação e Python.",
+      description: "Sou Oliver Souza, engenheiro de computação com foco em sustentação de aplicações e suporte técnico a produtos (Application Support / Technical Product Support), com experiência prática em APIs e investigação de incidentes em sistemas bancários. Também desenvolvo produtos digitais e atualmente estudo QA e Python para aprimorar a confiabilidade de sistemas.",
       ctaPrimary: "Ver projetos",
       ctaSecondary: "Conhecer minha trajetória",
       photoAlt: "Retrato fotográfico de Oliver Souza, Engenheiro de Computação",
@@ -93,7 +93,7 @@ export const content: Record<Language, PortfolioContent> = {
           code: "04 // INTERDISCIPLINARIDADE",
           title: "Comunicação & Formação Contínua",
           description: "Base sólida de diálogo interpessoal aprimorada no atendimento presencial no Banrisul e integração com times multidisciplinares em grandes operações.",
-          tags: ["Atendimento", "Comunicação Clara", "Inglês Profissional", "Neurociência", "Educação"],
+          tags: ["Atendimento", "Comunicação Clara", "Inglês — em desenvolvimento", "Neurociência", "Educação"],
         },
       ],
     },
@@ -106,9 +106,9 @@ export const content: Record<Language, PortfolioContent> = {
       items: [
         {
           id: "itau",
-          role: "Analista Jr. de Engenharia de TI",
+          role: "Analista de TI",
           company: "Itaú Unibanco",
-          period: "Outubro de 2021 a fevereiro de 2024",
+          period: "outubro de 2020 – fevereiro de 2024",
           tag: "INSTITUIÇÃO FINANCEIRA // OPERAÇÃO CRÍTICA",
           location: "São Paulo, SP (Atuação Remota)",
           description: "Atuação na sustentação de aplicações e no apoio à operação de sistemas em ambiente bancário. Realização de validações de APIs com Postman, análise de logs no Splunk, acompanhamento de incidentes e colaboração com equipes de desenvolvimento, produto e qualidade.",
@@ -164,7 +164,7 @@ export const content: Record<Language, PortfolioContent> = {
     featuredProject: {
       sectionTag: "[ PROJETO EM DESTAQUE ] // ESTUDO_DE_CASO",
       sectionTitle: "DocPed: Micro-SaaS de Documentação Pedagógica e Clínica",
-      exclusiveNotice: "IDENTIDADE DOCPED: Realce esmeralda/turquesa exclusivo desta seção.",
+      exclusiveNotice: "",
       uiLabels: {
         compositionTitle: "COMPOSIÇÃO VISUAL // PÁGINA INICIAL & TELA DE CADASTRO",
         compositionSubtitle: "[CLIQUE PARA ALTERNAR O PRIMEIRO PLANO OU AMPLIAR]",
@@ -276,7 +276,7 @@ export const content: Record<Language, PortfolioContent> = {
             "QA",
             "Automação de testes",
             "Python",
-            "Inglês profissional",
+            "Inglês — em desenvolvimento",
           ],
         },
       ],
@@ -326,7 +326,7 @@ export const content: Record<Language, PortfolioContent> = {
       subtitle: "Conecte-se para oportunidades profissionais em tecnologia ou troca de ideias.",
       text: "Estou aberto a oportunidades em sustentação de aplicações, QA, suporte técnico, produtos digitais e projetos web.",
       emailLabel: "E-mail profissional",
-      emailValue: "[A ser inserido posteriormente]",
+      emailValue: "",
       emailNotice: "Espaço reservado para o e-mail profissional.",
       emailReservedBadge: "ESPAÇO RESERVADO",
       channelsTitle: "CANAIS OFICIAIS",
@@ -374,7 +374,7 @@ export const content: Record<Language, PortfolioContent> = {
     hero: {
       label: "PORTFOLIO // TECHNOLOGY + DIGITAL PRODUCTS",
       title: "Technology, systems and ideas built with purpose.",
-      description: "I’m Oliver Souza, a Computer Engineer with experience in application support, observability, APIs and financial operations. I build digital products and am currently expanding my knowledge of software quality, test automation and Python.",
+      description: "I’m Oliver Souza, a Computer Engineer focused on Application Support and Technical Product Support, with hands-on experience in APIs and incident investigation within banking systems. I also build digital products and am currently studying QA and Python to continuously enhance system reliability.",
       ctaPrimary: "View projects",
       ctaSecondary: "Explore my journey",
       photoAlt: "Professional portrait of Oliver Souza, Computer Engineer",
@@ -439,7 +439,7 @@ export const content: Record<Language, PortfolioContent> = {
           code: "04 // INTERDISCIPLINARY",
           title: "Communication & Continuous Learning",
           description: "Strong interpersonal foundation built through direct client interaction at Banrisul, paired with collaboration in multidisciplinary teams.",
-          tags: ["Customer Support", "Clear Comms", "Professional English", "Neuroscience", "Education"],
+          tags: ["Customer Support", "Clear Comms", "English — currently improving", "Neuroscience", "Education"],
         },
       ],
     },
@@ -452,9 +452,9 @@ export const content: Record<Language, PortfolioContent> = {
       items: [
         {
           id: "itau",
-          role: "Junior IT Engineering Analyst",
+          role: "IT Analyst",
           company: "Itaú Unibanco",
-          period: "October 2021 to February 2024",
+          period: "October 2020 – February 2024",
           tag: "FINANCIAL INSTITUTION // CRITICAL OPERATIONS",
           location: "São Paulo, SP, Brazil (Remote)",
           description: "Worked in application support and assisted the operation of banking systems. Performed API validations with Postman, analyzed logs in Splunk, monitored incidents, and collaborated with development, product, and quality teams.",
@@ -509,7 +509,7 @@ export const content: Record<Language, PortfolioContent> = {
     featuredProject: {
       sectionTag: "[ FEATURED PROJECT ] // CASE_STUDY",
       sectionTitle: "DocPed: Micro-SaaS for Pedagogical and Clinical Documentation",
-      exclusiveNotice: "DOCPED IDENTITY: Emerald/turquoise accents are exclusive to this section.",
+      exclusiveNotice: "",
       uiLabels: {
         compositionTitle: "VISUAL SHOWCASE // LANDING PAGE & SIGN-UP SCREEN",
         compositionSubtitle: "[CLICK TO SWITCH THE FOREGROUND OR ENLARGE]",
@@ -621,7 +621,7 @@ export const content: Record<Language, PortfolioContent> = {
             "QA",
             "Test Automation",
             "Python",
-            "Professional English",
+            "English — currently improving",
           ],
         },
       ],
@@ -671,7 +671,7 @@ export const content: Record<Language, PortfolioContent> = {
       subtitle: "Connect for professional opportunities in tech or engineering discussions.",
       text: "I am open to opportunities in application support, QA, technical support, digital products, and web projects.",
       emailLabel: "Professional E-mail",
-      emailValue: "[To be inserted later]",
+      emailValue: "",
       emailNotice: "Space reserved for official contact e-mail.",
       emailReservedBadge: "RESERVED SPACE",
       channelsTitle: "OFFICIAL CHANNELS",

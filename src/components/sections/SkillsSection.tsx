@@ -82,10 +82,12 @@ export const SkillsSection = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[9px] font-mono text-white/30">
-                <span>{t.skills.verifiedLabel || 'VERIFICADO'}</span>
-                <span>[✓]</span>
-              </div>
+              {category.id !== 'estudos-atuais' && (
+                <div className="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[9px] font-mono text-white/30">
+                  <span>{t.skills.verifiedLabel || 'VERIFICADO'}</span>
+                  <span>[✓]</span>
+                </div>
+              )}
             </div>
           ))}
         </div>

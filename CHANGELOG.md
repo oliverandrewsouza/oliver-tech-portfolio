@@ -19,6 +19,12 @@ O formato é baseado no padrão [Keep a Changelog](https://keepachangelog.com/pt
 * **Metadados inconsistentes do DocPed**: Eliminação definitiva de descrições inadequadas que apresentavam o projeto como voltado à saúde pediátrica, estabelecendo-o com precisão como Micro-SaaS para documentação pedagógica e clínica na Educação Inclusiva e no Neurodesenvolvimento.
 
 ### Changed
+* **Revisão profissional para recrutadores internacionais**:
+  * **Experiência Itaú Unibanco**: Período alinhado para "outubro de 2020 – fevereiro de 2024" (PT) e "October 2020 – February 2024" (EN); cargo atualizado para "Analista de TI" (PT) e "IT Analyst" (EN), preservando integralmente as atividades técnicas.
+  * **Posicionamento no Hero**: Apresentação revisada em PT e EN com foco em Application Support / Technical Product Support, experiência prática com APIs e investigação de incidentes em sistemas bancários, além de menção aos estudos contínuos de QA e Python.
+  * **Competências e Idioma**: Grupo "Estudando atualmente" / "Currently Studying" com remoção exclusiva do selo de verificação; idioma ajustado com transparência para "Inglês — em desenvolvimento" / "English — currently improving".
+  * **Contato e Ação Principal**: Omissão de dados de e-mail provisórios na seção de contato e no console interativo; redirecionamento funcional do botão de ação principal ("Vamos conversar" / "Let's talk") diretamente para o perfil do LinkedIn.
+  * **Estudo de Caso DocPed**: Remoção da instrução interna de design visual da interface pública, preservando a identidade estética e o conteúdo técnico.
 * English is now the default language for first-time visitors while preserving manually selected language preferences.
 * **Centralização dos textos traduzíveis**: Consolidação completa de todas as cadeias de texto com variação de idioma no repositório central `src/data/content.ts`, com expansão pontual e segura do modelo de tipos em `src/types/index.ts`.
 * **Alinhamento dos dados do DocPed entre experiência e projeto em destaque**: Harmonização da stack tecnológica do DocPed no card da linha do tempo com o projeto real e confirmado (`React 18`, `TypeScript`, `Vite`, `Tailwind CSS`, `Supabase`, `PostgreSQL`, `Google Gemini API`, `Vitest`), expurgando referências legadas a Next.js 15, Prisma ORM, Stripe API e Zod.
